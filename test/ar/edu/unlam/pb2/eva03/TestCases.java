@@ -10,8 +10,8 @@ public class TestCases {
 
 	@Test
 	public void queSePuedaCrearUnObjetoVolador() {
-		Vehiculo avion = new Volador();
-		Volador avion = new Avion(1, "A-10");
+		Vehiculo avion = new Avion();
+		Volador avion1 = new Avion(1, "A-10");
 
 		assertEquals(0.0, avion.getAltura());
 		assertEquals(0.0, avion.getAltura(), 0.01);
