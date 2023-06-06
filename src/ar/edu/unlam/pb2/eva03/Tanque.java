@@ -1,35 +1,35 @@
 package ar.edu.unlam.pb2.eva03;
 
-public class Avion extends Vehiculo implements Volador{
+public class Tanque extends Vehiculo implements Terrestre{
 
-	public Avion(Integer capacidad, String nombre) {
+	public Tanque(Integer capacidad, String nombre) {
 		super();
 	}
-
-	public Avion() {
-		// TODO Auto-generated constructor stub
+	
+	public Tanque() {
+		
 	}
 
 	@Override
 	protected Integer getVelocidad() {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 
 	@Override
-	public void despegar() {
+	public void avanzarSobreTierra() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void aterrizar() {
+	public void detenerseSobreTierra() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void moverseEnElAire() {
+	public void moverseSobreTierra() {
 		// TODO Auto-generated method stub
 		
 	}
