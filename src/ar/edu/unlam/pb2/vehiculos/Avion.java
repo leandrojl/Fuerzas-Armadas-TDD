@@ -1,4 +1,6 @@
-package ar.edu.unlam.pb2.eva03;
+package ar.edu.unlam.pb2.vehiculos;
+
+import ar.edu.unlam.pb2.interfaces.Volador;
 
 public class Avion extends Vehiculo implements Volador{
 

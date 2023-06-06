@@ -5,6 +5,17 @@ import static org.junit.Assert.*;
 import org.junit.Assert;
 import org.junit.Test;
 
+import ar.edu.unlam.pb2.interfazBatalla.FuerzaArmada;
+import ar.edu.unlam.pb2.interfazBatalla.TipoDeBatalla;
+import ar.edu.unlam.pb2.vehiculos.Anfibio;
+import ar.edu.unlam.pb2.vehiculos.Avion;
+import ar.edu.unlam.pb2.vehiculos.Camion;
+import ar.edu.unlam.pb2.vehiculos.Destructor;
+import ar.edu.unlam.pb2.vehiculos.HidroAvion;
+import ar.edu.unlam.pb2.vehiculos.Portaviones;
+import ar.edu.unlam.pb2.vehiculos.Submarino;
+import ar.edu.unlam.pb2.vehiculos.Tanque;
+
 
 
 public class TestCases {
@@ -77,19 +88,19 @@ public class TestCases {
 	public void queSePuedaArmarElConvoy() {
 		FuerzaArmada argentina = new FuerzaArmada();
 
-		argentina.agregarVehiculo(new Avion("0001", "A-10"));
-		argentina.agregarVehiculo(new Avion("0002", "A-10"));
-		argentina.agregarVehiculo(new Avion("0003", "F-102"));
-		argentina.agregarVehiculo(new Avion("0004", "F-15"));
-		argentina.agregarVehiculo(new Tanque("0005", "Renault FT"));
-		argentina.agregarVehiculo(new Camion("0006", "T-72"));
-		argentina.agregarVehiculo(new Camion("0007", "T-72"));
-		argentina.agregarVehiculo(new Submarino("0008", "A-10"));
-		argentina.agregarVehiculo(new Portaviones("0009", "A-10"));
-		argentina.agregarVehiculo(new Destructor("0010", "A-10"));
-		argentina.agregarVehiculo(new Destructor("0011", "A-10"));
-		argentina.agregarVehiculo(new Hidroavion("0012", "A-10"));
-		argentina.agregarVehiculo(new Anfibio("0012", "A-10"));
+		argentina.agregarVehiculo(new Avion(0001, "A-10"));
+		argentina.agregarVehiculo(new Avion(0002, "A-10"));
+		argentina.agregarVehiculo(new Avion(0003, "F-102"));
+		argentina.agregarVehiculo(new Avion(0004, "F-15"));
+		argentina.agregarVehiculo(new Tanque(0005, "Renault FT"));
+		argentina.agregarVehiculo(new Camion(0006, "T-72"));
+		argentina.agregarVehiculo(new Camion(0007, "T-72"));
+		argentina.agregarVehiculo(new Submarino(0008, "A-10"));
+		argentina.agregarVehiculo(new Portaviones(0009, "A-10"));
+		argentina.agregarVehiculo(new Destructor(0010, "A-10"));
+		argentina.agregarVehiculo(new Destructor(0011, "A-10"));
+		argentina.agregarVehiculo(new HidroAvion(0012, "A-10"));
+		argentina.agregarVehiculo(new Anfibio(0012, "A-10"));
 		argentina.agregarVehiculo(new Avion(1, "A-10"));
 		argentina.agregarVehiculo(new Avion(2, "A-10"));
 		argentina.agregarVehiculo(new Avion(3, "F-102"));
@@ -120,36 +131,34 @@ public class TestCases {
 
 	}
 
-		assertEquals(100.5, argentina.getBatalla("San Lorenzo").getLatitud(),0.01);
-		assertEquals(20.3, argentina.getBatalla("San Lorenzo").getLongitud(),0.01);
-	}	
-
 	@Test
 	public void queSePuedaPlanearLaBatallaSobreElOceano() {
+	
+	}
 	public void queSePuedaPresentarBatallaTerrestre() throws VehiculoInexistente, VehiculoIncompatible {
 		FuerzaArmada argentina = new FuerzaArmada();
 
-		argentina.agregarVehiculo(new Avion("0001", "A-10"));
-		argentina.agregarVehiculo(new Avion("0002", "A-10"));
-		argentina.agregarVehiculo(new Avion("0003", "F-102"));
-		argentina.agregarVehiculo(new Avion("0004", "F-15"));
-		argentina.agregarVehiculo(new Tanque("0005", "Renault FT"));
-		argentina.agregarVehiculo(new Camion("0006", "T-72"));
-		argentina.agregarVehiculo(new Camion("0007", "T-72"));
-		argentina.agregarVehiculo(new Submarino("0008", "A-10"));
-		argentina.agregarVehiculo(new Portaviones("0009", "A-10"));
-		argentina.agregarVehiculo(new Destructor("0010", "A-10"));
-		argentina.agregarVehiculo(new Destructor("0011", "A-10"));
-		argentina.agregarVehiculo(new Hidroavion("0012", "A-10"));
-		argentina.agregarVehiculo(new Anfibio("0012", "A-10"));
+		argentina.agregarVehiculo(new Avion(10001, "A-10"));
+		argentina.agregarVehiculo(new Avion(20002, "A-10"));
+		argentina.agregarVehiculo(new Avion(30003, "F-102"));
+		argentina.agregarVehiculo(new Avion(40004, "F-15"));
+		argentina.agregarVehiculo(new Tanque(50005, "Renault FT"));
+		argentina.agregarVehiculo(new Camion(60006, "T-72"));
+		argentina.agregarVehiculo(new Camion(70007, "T-72"));
+		argentina.agregarVehiculo(new Submarino(80008, "A-10"));
+		argentina.agregarVehiculo(new Portaviones(90009, "A-10"));
+		argentina.agregarVehiculo(new Destructor(10010, "A-10"));
+		argentina.agregarVehiculo(new Destructor(10011, "A-10"));
+		argentina.agregarVehiculo(new HidroAvion(10012, "A-10"));
+		argentina.agregarVehiculo(new Anfibio(10013, "A-10"));
 
-		argentina.crearBatalla("Terrestre", 100.5, 20.3, "San Lorenzo")
+		argentina.crearBatalla("Terrestre", 100.5, 20.3, "San Lorenzo");
 
 		argentina.agregarVehiculo(new Tanque(5, "Renault FT"));
 		argentina.agregarVehiculo(new Camion(6, "T-72"));
 		argentina.agregarVehiculo(new Camion(7, "T-72"));
 
-		argentina.presentarBatalla()
+		argentina.presentarBatalla();
 		argentina.crearBatalla("San Lorenzo", TipoDeBatalla.TERRESTRE, 100.5, 20.3);
 
 		assertTrue(argentina.enviarALaBatalla("San Lorenzo", 5));

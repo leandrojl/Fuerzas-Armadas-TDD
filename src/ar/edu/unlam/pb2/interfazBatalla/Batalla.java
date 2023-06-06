@@ -1,6 +1,8 @@
-package ar.edu.unlam.pb2.eva03;
+package ar.edu.unlam.pb2.interfazBatalla;
 
 import java.util.HashSet;
+
+import ar.edu.unlam.pb2.vehiculos.Vehiculo;
 
 
 public class Batalla {

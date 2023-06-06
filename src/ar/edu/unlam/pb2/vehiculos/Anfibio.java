@@ -1,4 +1,7 @@
-package ar.edu.unlam.pb2.eva03;
+package ar.edu.unlam.pb2.vehiculos;
+
+import ar.edu.unlam.pb2.interfaces.Acuatico;
+import ar.edu.unlam.pb2.interfaces.Terrestre;
 
 public class Anfibio extends Vehiculo implements Terrestre,Acuatico{
 	

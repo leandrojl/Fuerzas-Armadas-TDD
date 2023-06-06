@@ -1,19 +1,21 @@
-package ar.edu.unlam.pb2.eva03;
+package ar.edu.unlam.pb2.vehiculos;
 
-public class Tanque extends Vehiculo implements Terrestre{
+import ar.edu.unlam.pb2.interfaces.Terrestre;
 
-	public Tanque(Integer codigo, String nombre) {
+public class Destructor extends Vehiculo implements Terrestre {
+	
+	public Destructor(Integer codigo, String nombre) {
 		super();
 	}
 	
-	public Tanque() {
+	public Destructor() {
 		
 	}
 
 	@Override
 	protected Integer getVelocidad() {
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 	@Override
@@ -33,5 +35,4 @@ public class Tanque extends Vehiculo implements Terrestre{
 		// TODO Auto-generated method stub
 		
 	}
-
 }
