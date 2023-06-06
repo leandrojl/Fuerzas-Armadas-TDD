@@ -2,7 +2,7 @@ package ar.edu.unlam.pb2.eva03;
 
 public class Tanque extends Vehiculo implements Terrestre{
 
-	public Tanque(Integer capacidad, String nombre) {
+	public Tanque(Integer codigo, String nombre) {
 		super();
 	}
 	

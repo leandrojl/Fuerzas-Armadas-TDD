@@ -2,7 +2,7 @@ package ar.edu.unlam.pb2.eva03;
 
 public class Avion extends Vehiculo implements Volador{
 
-	public Avion(Integer capacidad, String nombre) {
+	public Avion(Integer codigo, String nombre) {
 		super();
 	}
 

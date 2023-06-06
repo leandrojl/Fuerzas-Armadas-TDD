@@ -3,10 +3,10 @@ package ar.edu.unlam.pb2.eva03;
 public abstract class Vehiculo {
 	
 	String nombre;
-	Integer capacidad;
+	Integer codigo;
 
-	public Vehiculo(Integer capacidad, String nombre) {
-		this.capacidad = capacidad;
+	public Vehiculo(Integer codigo, String nombre) {
+		this.codigo = codigo;
 		this.nombre = nombre;
 	}
 	
@@ -24,12 +24,12 @@ public abstract class Vehiculo {
 		this.nombre = nombre;
 	}
 
-	public Integer getCapacidad() {
-		return capacidad;
+	public Integer getCodigo() {
+		return codigo;
 	}
 
-	public void setCapacidad(Integer capacidad) {
-		this.capacidad = capacidad;
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
 	}
 
 }

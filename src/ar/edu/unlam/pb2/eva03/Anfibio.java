@@ -4,7 +4,7 @@ public class Anfibio extends Vehiculo implements Terrestre,Acuatico{
 	
 	Integer profundidad;
 
-	public Anfibio(Integer capacidad, String nombre) {
+	public Anfibio(Integer codigo, String nombre) {
 		super();
 	}
 	
