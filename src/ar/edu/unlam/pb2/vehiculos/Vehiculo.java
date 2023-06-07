@@ -2,6 +2,8 @@ package ar.edu.unlam.pb2.vehiculos;
 
 import java.util.Objects;
 
+import ar.edu.unlam.pb2.interfazBatalla.TipoDeBatalla;
+
 public abstract class Vehiculo {
 	
 	String nombre;
@@ -16,7 +18,9 @@ public abstract class Vehiculo {
 		
 	}
 
-	protected abstract Integer getVelocidad();
+	public abstract Integer getVelocidad();
+	
+	public abstract TipoDeBatalla getTipo();
 
 	public String getNombre() {
 		return nombre;
@@ -33,6 +37,8 @@ public abstract class Vehiculo {
 	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
+	
+	
 
 	@Override
 	public int hashCode() {
@@ -45,8 +51,8 @@ public abstract class Vehiculo {
 			return true;
 		if (obj == null)
 			return false;
-		if (getClass() != obj.getClass())
-			return false;
+	//	if (getClass() != obj.getClass())
+	//		return false;
 		Vehiculo other = (Vehiculo) obj;
 		return Objects.equals(codigo, other.codigo);
 	}

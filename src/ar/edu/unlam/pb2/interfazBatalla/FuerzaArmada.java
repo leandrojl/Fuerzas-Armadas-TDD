@@ -2,25 +2,32 @@ package ar.edu.unlam.pb2.interfazBatalla;
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
 
+import ar.edu.unlam.pb2.excepciones.BatallaInexistenteException;
+import ar.edu.unlam.pb2.excepciones.VehiculoInexistenteException;
+import ar.edu.unlam.pb2.interfaces.Acuatico;
+import ar.edu.unlam.pb2.interfaces.Terrestre;
+import ar.edu.unlam.pb2.interfaces.Volador;
 import ar.edu.unlam.pb2.vehiculos.Avion;
 import ar.edu.unlam.pb2.vehiculos.Vehiculo;
 
 public class FuerzaArmada {
 
-	private HashSet<Vehiculo> convoy;
+	private LinkedHashSet<Vehiculo> convoy;
+	
 	private HashMap<String, Batalla> batallas;
 	
-	public FuerzaArmada(HashSet<Vehiculo> convoy, HashMap<String, Batalla> batallas) {
+	public FuerzaArmada(LinkedHashSet<Vehiculo> convoy, HashMap<String, Batalla> batallas) {
 		super();
 		this.convoy = convoy;
 		this.batallas = batallas;
 	}
 	
 	public FuerzaArmada() {
-		this.convoy = new HashSet<Vehiculo>();
+		this.convoy = new LinkedHashSet<Vehiculo>();
 		this.batallas = new HashMap<String, Batalla>();
 	}
 
@@ -28,7 +35,7 @@ public class FuerzaArmada {
 		return convoy;
 	}
 
-	public void setConvoy(HashSet<Vehiculo> convoy) {
+	public void setConvoy(LinkedHashSet<Vehiculo> convoy) {
 		this.convoy = convoy;
 	}
 
@@ -40,23 +47,14 @@ public class FuerzaArmada {
 		this.batallas = batallas;
 	}
 
-	public Object getCapacidadDeDefensa() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public void crearBatalla(String string, TipoDeBatalla terrestre, double d, double e) {
-		// TODO Auto-generated method stub
+	public void crearBatalla(String nombreBatalla, TipoDeBatalla tipoDeBatalla, Double latitud, Double longitud) {
+		
+		this.batallas.put(nombreBatalla, new Batalla(latitud, longitud,tipoDeBatalla));
 		
 	}
 
-	public Object getBatalla(String string) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 	public void agregarVehiculo(Vehiculo vehiculo) {
-		// TODO Auto-generated method stub
+		this.convoy.add(vehiculo);
 		
 	}
 
@@ -64,15 +62,81 @@ public class FuerzaArmada {
 		// TODO Auto-generated method stub
 		
 	}
-
-	public void crearBatalla(String string, double d, double d2, String string2) {
-		// TODO Auto-generated method stub
+/*
+ * 1) Buscar batalla
+ * 2) Buscar vehiculo en el convoy
+ * 3) Enviar el vehiculo a la batalla
+ */
+	public boolean enviarALaBatalla(String nombreBatalla, Integer codigoVehiculo) throws Exception {
+		Batalla batalla = buscarBatallaPorNombre(nombreBatalla);
+		Vehiculo vehiculo = buscarVehiculo(codigoVehiculo);
+		batalla.agregarVehiculo(vehiculo);
 		
+		return true;
+		
+//		if(batallas.containsKey(nombreBatalla)) {
+//			
+//			for(Vehiculo vehiculo : convoy){
+//				
+//				if(vehiculo.getCodigo().equals(codigoVehiculo)) {
+//					
+//					Vehiculo vehiculoEncontado = vehiculo;
+//					
+//					if(vehiculoEncontado instanceof Volador && batallas.get(nombreBatalla).getTipo() == TipoDeBatalla.AIRE) {
+//						
+//						batallas.get(nombreBatalla).getVehiculosEnLaBatalla().add(vehiculoEncontado);
+//						
+//						return true;
+//						
+//					}else if(vehiculoEncontado instanceof Terrestre && batallas.get(nombreBatalla).getTipo() == TipoDeBatalla.TERRESTRE) {
+//						
+//						batallas.get(nombreBatalla).getVehiculosEnLaBatalla().add(vehiculoEncontado);
+//						
+//						return true;
+//						
+//					}else if(vehiculoEncontado instanceof Acuatico && batallas.get(nombreBatalla).getTipo() == TipoDeBatalla.ACUATICA) {
+//						
+//						batallas.get(nombreBatalla).getVehiculosEnLaBatalla().add(vehiculoEncontado);
+//						
+//						return true;
+//						
+//					}else {
+//						
+//						return false;
+//					}
+//					
+//				}
+//			}
+//			
+//		}else {
+//			return false;
+//		}
+//		
+//		return false;
 	}
 
-	public boolean enviarALaBatalla(String string, int i) {
-		// TODO Auto-generated method stub
-		return false;
+	private Vehiculo buscarVehiculo(Integer codigoVehiculo) throws VehiculoInexistenteException {
+		
+		for(Vehiculo vehiculo : convoy) {
+			if(vehiculo.getCodigo().equals(codigoVehiculo)) {
+				
+				return vehiculo;
+				
+			}
+		}
+		
+		 throw new VehiculoInexistenteException("vehiculo inexistente");
+	}
+
+	private Batalla buscarBatallaPorNombre(String nombreBatalla) throws BatallaInexistenteException {
+		
+		if(this.batallas.containsKey(nombreBatalla)) {
+			
+			return this.batallas.get(nombreBatalla);
+			
+		}
+		
+		 throw new BatallaInexistenteException("batalla inexistente");
 	} 
 
 }

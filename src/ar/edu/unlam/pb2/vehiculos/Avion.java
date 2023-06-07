@@ -5,7 +5,7 @@ import ar.edu.unlam.pb2.interfaces.Volador;
 public class Avion extends Vehiculo implements Volador{
 
 	public Avion(Integer codigo, String nombre) {
-		super();
+		super(codigo, nombre);
 	}
 
 	public Avion() {

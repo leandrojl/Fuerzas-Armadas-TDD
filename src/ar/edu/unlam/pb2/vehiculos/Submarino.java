@@ -7,7 +7,7 @@ public class Submarino extends Vehiculo implements Acuatico{
 	Integer profundidad;
 
 	public Submarino(Integer codigo, String nombre) {
-		super();
+		super(codigo, nombre);
 	}
 	
 	public Submarino() {

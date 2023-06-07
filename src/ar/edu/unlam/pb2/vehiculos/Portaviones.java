@@ -5,7 +5,7 @@ import ar.edu.unlam.pb2.interfaces.Acuatico;
 public class Portaviones extends Vehiculo implements Acuatico{
 	
 	public Portaviones(Integer codigo, String nombre) {
-		super();
+		super(codigo, nombre);
 	}
 	
 	public Portaviones() {

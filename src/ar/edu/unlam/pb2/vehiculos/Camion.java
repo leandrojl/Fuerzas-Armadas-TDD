@@ -1,11 +1,12 @@
 package ar.edu.unlam.pb2.vehiculos;
 
 import ar.edu.unlam.pb2.interfaces.Terrestre;
+import ar.edu.unlam.pb2.interfazBatalla.TipoDeBatalla;
 
 public class Camion extends Vehiculo implements Terrestre{
 
 	public Camion(Integer codigo, String nombre) {
-		super();
+		super(codigo, nombre);
 	}
 	
 	public Camion() {
@@ -31,9 +32,15 @@ public class Camion extends Vehiculo implements Terrestre{
 	}
 
 	@Override
-	protected Integer getVelocidad() {
+	public Integer getVelocidad() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public TipoDeBatalla getTipo() {
+		// TODO Auto-generated method stub
+		return TipoDeBatalla.TERRESTRE;
 	}
 	
 }

@@ -2,11 +2,12 @@ package ar.edu.unlam.pb2.vehiculos;
 
 import ar.edu.unlam.pb2.interfaces.Acuatico;
 import ar.edu.unlam.pb2.interfaces.Volador;
+import ar.edu.unlam.pb2.interfazBatalla.TipoDeBatalla;
 
 public class HidroAvion extends Vehiculo implements Volador, Acuatico{
 	
 	public HidroAvion(Integer codigo, String nombre) {
-		super();
+		super(codigo, nombre);
 	}
 	
 	public HidroAvion() {
@@ -14,7 +15,7 @@ public class HidroAvion extends Vehiculo implements Volador, Acuatico{
 	}
 
 	@Override
-	protected Integer getVelocidad() {
+	public Integer getVelocidad() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -59,6 +60,12 @@ public class HidroAvion extends Vehiculo implements Volador, Acuatico{
 	public void moverseEnElAire() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public TipoDeBatalla getTipo() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

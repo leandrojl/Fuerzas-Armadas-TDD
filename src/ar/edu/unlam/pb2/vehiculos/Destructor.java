@@ -5,7 +5,7 @@ import ar.edu.unlam.pb2.interfaces.Terrestre;
 public class Destructor extends Vehiculo implements Terrestre {
 	
 	public Destructor(Integer codigo, String nombre) {
-		super();
+		super(codigo, nombre);
 	}
 	
 	public Destructor() {
