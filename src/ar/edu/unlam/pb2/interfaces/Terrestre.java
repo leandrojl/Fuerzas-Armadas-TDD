@@ -4,8 +4,6 @@ import ar.edu.unlam.pb2.interfazBatalla.TipoDeBatalla;
 
 public interface Terrestre {
 	
-
-	
 public void avanzarSobreTierra();
 
 public void detenerseSobreTierra();

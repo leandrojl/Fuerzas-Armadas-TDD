@@ -1,6 +1,7 @@
 package ar.edu.unlam.pb2.vehiculos;
 
 import ar.edu.unlam.pb2.interfaces.Volador;
+import ar.edu.unlam.pb2.interfazBatalla.TipoDeBatalla;
 
 public class Avion extends Vehiculo implements Volador{
 
@@ -13,7 +14,7 @@ public class Avion extends Vehiculo implements Volador{
 	}
 
 	@Override
-	protected Integer getVelocidad() {
+	public Integer getVelocidad() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -34,6 +35,18 @@ public class Avion extends Vehiculo implements Volador{
 	public void moverseEnElAire() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public int compareTo(Vehiculo o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public TipoDeBatalla getTipo() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

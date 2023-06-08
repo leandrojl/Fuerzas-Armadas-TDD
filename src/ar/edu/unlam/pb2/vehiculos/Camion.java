@@ -42,5 +42,11 @@ public class Camion extends Vehiculo implements Terrestre{
 		// TODO Auto-generated method stub
 		return TipoDeBatalla.TERRESTRE;
 	}
+
+	@Override
+	public int compareTo(Vehiculo o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 }

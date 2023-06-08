@@ -1,6 +1,7 @@
 package ar.edu.unlam.pb2.vehiculos;
 
 import ar.edu.unlam.pb2.interfaces.Acuatico;
+import ar.edu.unlam.pb2.interfazBatalla.TipoDeBatalla;
 
 public class Submarino extends Vehiculo implements Acuatico{
 	
@@ -48,7 +49,19 @@ public class Submarino extends Vehiculo implements Acuatico{
 	}
 
 	@Override
-	protected Integer getVelocidad() {
+	public Integer getVelocidad() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int compareTo(Vehiculo o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public TipoDeBatalla getTipo() {
 		// TODO Auto-generated method stub
 		return null;
 	}

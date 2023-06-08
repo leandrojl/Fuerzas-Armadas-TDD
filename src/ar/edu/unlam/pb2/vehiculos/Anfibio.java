@@ -26,7 +26,7 @@ public class Anfibio extends Vehiculo implements Terrestre,Acuatico{
 	}
 
 	@Override
-	protected Integer getVelocidad() {
+	public Integer getVelocidad() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -77,6 +77,12 @@ public class Anfibio extends Vehiculo implements Terrestre,Acuatico{
 	public TipoDeBatalla getTipo() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public int compareTo(Vehiculo o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

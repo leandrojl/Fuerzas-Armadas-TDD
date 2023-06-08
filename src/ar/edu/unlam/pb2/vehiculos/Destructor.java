@@ -1,6 +1,7 @@
 package ar.edu.unlam.pb2.vehiculos;
 
 import ar.edu.unlam.pb2.interfaces.Terrestre;
+import ar.edu.unlam.pb2.interfazBatalla.TipoDeBatalla;
 
 public class Destructor extends Vehiculo implements Terrestre {
 	
@@ -13,7 +14,7 @@ public class Destructor extends Vehiculo implements Terrestre {
 	}
 
 	@Override
-	protected Integer getVelocidad() {
+	public Integer getVelocidad() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -34,5 +35,17 @@ public class Destructor extends Vehiculo implements Terrestre {
 	public void moverseSobreTierra() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public int compareTo(Vehiculo o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public TipoDeBatalla getTipo() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

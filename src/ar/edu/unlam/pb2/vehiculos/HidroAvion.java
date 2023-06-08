@@ -68,4 +68,10 @@ public class HidroAvion extends Vehiculo implements Volador, Acuatico{
 		return null;
 	}
 
+	@Override
+	public int compareTo(Vehiculo o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

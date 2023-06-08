@@ -4,7 +4,7 @@ import java.util.Objects;
 
 import ar.edu.unlam.pb2.interfazBatalla.TipoDeBatalla;
 
-public abstract class Vehiculo {
+public abstract class Vehiculo implements Comparable<Vehiculo>{
 	
 	String nombre;
 	Integer codigo;

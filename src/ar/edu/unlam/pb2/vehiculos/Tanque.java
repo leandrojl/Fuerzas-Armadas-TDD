@@ -14,7 +14,7 @@ public class Tanque extends Vehiculo implements Terrestre{
 	}
 
 	@Override
-	protected Integer getVelocidad() {
+	public Integer getVelocidad() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -41,6 +41,12 @@ public class Tanque extends Vehiculo implements Terrestre{
 	public TipoDeBatalla getTipo() {
 		
 		return TipoDeBatalla.TERRESTRE;
+	}
+
+	@Override
+	public int compareTo(Vehiculo o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
