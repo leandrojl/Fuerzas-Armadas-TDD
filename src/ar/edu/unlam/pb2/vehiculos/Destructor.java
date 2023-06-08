@@ -44,8 +44,8 @@ public class Destructor extends Vehiculo implements Terrestre {
 	}
 
 	@Override
-	public TipoDeBatalla getTipo() {
+	public TipoDeBatalla[] getTipo() {
 		// TODO Auto-generated method stub
-		return null;
+		return new TipoDeBatalla[] {TipoDeBatalla.TERRESTRE};
 	}
 }

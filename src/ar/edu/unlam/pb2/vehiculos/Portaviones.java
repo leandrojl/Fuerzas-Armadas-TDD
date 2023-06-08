@@ -50,9 +50,9 @@ public class Portaviones extends Vehiculo implements Acuatico{
 	}
 
 	@Override
-	public TipoDeBatalla getTipo() {
+	public TipoDeBatalla[] getTipo() {
 		// TODO Auto-generated method stub
-		return null;
+		return new TipoDeBatalla[] {TipoDeBatalla.ACUATICA};
 	}
 
 }

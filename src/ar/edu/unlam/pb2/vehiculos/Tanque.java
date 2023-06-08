@@ -38,9 +38,9 @@ public class Tanque extends Vehiculo implements Terrestre{
 	}
 
 	@Override
-	public TipoDeBatalla getTipo() {
+	public TipoDeBatalla[] getTipo() {
 		
-		return TipoDeBatalla.TERRESTRE;
+		return new TipoDeBatalla[] {TipoDeBatalla.TERRESTRE};
 	}
 
 	@Override

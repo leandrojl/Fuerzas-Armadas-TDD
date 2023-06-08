@@ -10,6 +10,4 @@ public void detenerseSobreTierra();
 
 public void moverseSobreTierra();
 
-public TipoDeBatalla getTipo();
-
 }

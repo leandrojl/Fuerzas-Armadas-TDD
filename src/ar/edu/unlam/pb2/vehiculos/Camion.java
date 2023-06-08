@@ -38,9 +38,9 @@ public class Camion extends Vehiculo implements Terrestre{
 	}
 
 	@Override
-	public TipoDeBatalla getTipo() {
+	public TipoDeBatalla[] getTipo() {
 		// TODO Auto-generated method stub
-		return TipoDeBatalla.TERRESTRE;
+		return new TipoDeBatalla[] {TipoDeBatalla.TERRESTRE};
 	}
 
 	@Override

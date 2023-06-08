@@ -74,9 +74,9 @@ public class Anfibio extends Vehiculo implements Terrestre,Acuatico{
 	}
 
 	@Override
-	public TipoDeBatalla getTipo() {
+	public TipoDeBatalla[] getTipo() {
 		// TODO Auto-generated method stub
-		return null;
+		return new TipoDeBatalla[] {TipoDeBatalla.ACUATICA, TipoDeBatalla.TERRESTRE};
 	}
 
 	@Override

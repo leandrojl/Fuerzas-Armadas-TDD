@@ -20,7 +20,7 @@ public abstract class Vehiculo implements Comparable<Vehiculo>{
 
 	public abstract Integer getVelocidad();
 	
-	public abstract TipoDeBatalla getTipo();
+	public abstract TipoDeBatalla[] getTipo();
 
 	public String getNombre() {
 		return nombre;

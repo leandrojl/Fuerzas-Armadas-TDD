@@ -63,9 +63,9 @@ public class HidroAvion extends Vehiculo implements Volador, Acuatico{
 	}
 
 	@Override
-	public TipoDeBatalla getTipo() {
+	public TipoDeBatalla[] getTipo() {
 		// TODO Auto-generated method stub
-		return null;
+		return new TipoDeBatalla[] {TipoDeBatalla.ACUATICA, TipoDeBatalla.AIRE};
 	}
 
 	@Override

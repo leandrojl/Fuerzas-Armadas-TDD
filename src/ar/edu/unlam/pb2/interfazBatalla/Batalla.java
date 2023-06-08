@@ -62,15 +62,21 @@ public class Batalla {
 		this.vehiculosEnLaBatalla.add(vehiculo);
 	}
 
-	private void validarVehiculo(Vehiculo vehiculo) throws Exception {
+	private Boolean validarVehiculo(Vehiculo vehiculo) throws Exception {
 		//String palabra = vehiculo.getClass().getSimpleName();
 		//!vehiculo.getClass().getSimpleName().equals(this.tipo.toString())
-		if(!vehiculo.getTipo().equals(this.tipo)) {
-			throw new VehiculoIncompatibleException("vehiculo incompatible");
-		}
-		if(vehiculo.getCodigo()<0) {
-			throw new Exception("vehiculo incompatible");
-		}
+		
+			for(int i=0; i< vehiculo.getTipo().length;i++) {
+				if(vehiculo.getTipo()[i].equals(this.tipo)) {
+					return true;
+				}
+			}	
+		
+		
+		throw new VehiculoIncompatibleException("vehiculo incompatible");
+//		if(vehiculo.getCodigo()<0) {
+//			throw new Exception("vehiculo incompatible");
+//		}
 	}
 
 	

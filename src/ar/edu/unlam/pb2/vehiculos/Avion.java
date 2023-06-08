@@ -44,9 +44,9 @@ public class Avion extends Vehiculo implements Volador{
 	}
 
 	@Override
-	public TipoDeBatalla getTipo() {
+	public TipoDeBatalla[] getTipo() {
 		// TODO Auto-generated method stub
-		return null;
+		return new TipoDeBatalla[] {TipoDeBatalla.AIRE};
 	}
 
 }
