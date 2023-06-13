@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.Set;
 
 import ar.edu.unlam.pb2.excepciones.BatallaInexistenteException;
+import ar.edu.unlam.pb2.excepciones.VehiculoIncompatibleException;
 import ar.edu.unlam.pb2.excepciones.VehiculoInexistenteException;
 import ar.edu.unlam.pb2.interfaces.Acuatico;
 import ar.edu.unlam.pb2.interfaces.Terrestre;
@@ -67,7 +68,7 @@ public class FuerzaArmada {
  * 2) Buscar vehiculo en el convoy
  * 3) Enviar el vehiculo a la batalla
  */
-	public boolean enviarALaBatalla(String nombreBatalla, Integer codigoVehiculo) throws Exception {
+	public boolean enviarALaBatalla(String nombreBatalla, Integer codigoVehiculo) throws VehiculoInexistenteException,VehiculoIncompatibleException, BatallaInexistenteException {
 		Batalla batalla = buscarBatallaPorNombre(nombreBatalla);
 		Vehiculo vehiculo = buscarVehiculo(codigoVehiculo);
 		batalla.agregarVehiculo(vehiculo);

@@ -3,6 +3,7 @@ package ar.edu.unlam.pb2.interfazBatalla;
 import java.util.HashSet;
 
 import ar.edu.unlam.pb2.excepciones.VehiculoIncompatibleException;
+import ar.edu.unlam.pb2.excepciones.VehiculoInexistenteException;
 import ar.edu.unlam.pb2.vehiculos.Vehiculo;
 
 
@@ -57,12 +58,12 @@ public class Batalla {
 		this.vehiculosEnLaBatalla = vehiculosEnLaBatalla;
 	}
 
-	public void agregarVehiculo(Vehiculo vehiculo) throws Exception {
+	public void agregarVehiculo(Vehiculo vehiculo) throws VehiculoInexistenteException, VehiculoIncompatibleException {
 		validarVehiculo(vehiculo);
 		this.vehiculosEnLaBatalla.add(vehiculo);
 	}
 
-	private Boolean validarVehiculo(Vehiculo vehiculo) throws Exception {
+	private Boolean validarVehiculo(Vehiculo vehiculo) throws VehiculoIncompatibleException {
 		//String palabra = vehiculo.getClass().getSimpleName();
 		//!vehiculo.getClass().getSimpleName().equals(this.tipo.toString())
 		
